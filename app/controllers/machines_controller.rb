@@ -5,7 +5,7 @@ class MachinesController < ApplicationController
 
   def show
     @machine = Machine.find(params[:id])
-    @snacks = Snacks.where(machine_id = @machine.id)
+    @snacks = Snack.where(machine_id = @machine.id)
     @average = @snacks.average_price
   end
 end
